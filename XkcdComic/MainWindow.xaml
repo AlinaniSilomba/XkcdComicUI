@@ -1,0 +1,31 @@
+﻿<Window x:Class="XkcdComic.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XkcdComic"
+        mc:Ignorable="d" FontSize="22" Loaded="Window_Loaded"
+        Title="Xkcd Comic" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="0">
+            <Button x:Name="PreviousImageButton" Margin="15" Padding="10" Click="PreviousImageButton_Click" >Previous</Button>
+            <Button x:Name="NextImageButton" Margin="15" Padding="10" Click="NextImageButton_Click">Next</Button>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical"  HorizontalAlignment="Left" Grid.Row="0">
+            <TextBlock x:Name="ComicTitle" Margin="15"/>
+        </StackPanel>
+
+        <Image x:Name="comicImage" Grid.Row="2" Margin="15"/>
+
+    </Grid>
+</Window>
